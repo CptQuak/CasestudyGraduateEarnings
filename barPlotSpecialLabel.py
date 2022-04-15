@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+def barPlotSpecialLabel(bars1,bars2):
+    plt.bar_label(bars1,labels=[f'{x:.2%}' if x>0.16  else "" for x in bars1.datavalues],padding=407,color="#21519e")
+    plt.bar_label(bars1,labels=[f'{x:.2%}' if x>0.05 and x<0.14  else "" for x in bars1.datavalues],padding=57,color="#21519e")
+    plt.bar_label(bars1,labels=[f'{x:.2%}' if x<0.05  else "" for x in bars1.datavalues],padding=13,color="#21519e")
+    plt.bar_label(bars1,labels=['|' if x>0.16  else "" for x in bars1.datavalues],padding=497,color="black")
+    plt.bar_label(bars1,labels=['|' if x>0.09 and x<0.14  else "" for x in bars1.datavalues],padding=142,color="black")
+    plt.bar_label(bars1,labels=['|' if x>0.05 and x<0.09  else "" for x in bars1.datavalues],padding=132,color="black")
+    plt.bar_label(bars1,labels=['|' if x<0.05  else "" for x in bars1.datavalues],padding=87,color="black")
+    plt.bar_label(bars2,labels=[f'{x:.2%}' if x>0.16  else "" for x in bars2.datavalues],padding=120,color="#d46708")
+    plt.bar_label(bars2,labels=[f'{x:.2%}' if x>0.03 and x<0.035  else "" for x in bars2.datavalues],padding=112,color="#d46708")
+    plt.bar_label(bars2,labels=[f'{x:.2%}' if x>0.035 and x<0.04  else "" for x in bars2.datavalues],padding=102,color="#d46708")
+    plt.bar_label(bars2,labels=[f'{x:.2%}' if x>0.04 and x<0.05  else "" for x in bars2.datavalues],padding=97,color="#d46708")
+    plt.bar_label(bars2,labels=[f'{x:.2%}' if x>0.005 and x<0.01  else "" for x in bars2.datavalues],padding=92,color="#d46708")
+    plt.bar_label(bars2,labels=[f'{x:.2%}' if x<0.005  else "" for x in bars2.datavalues],padding=99,color="#d46708")
